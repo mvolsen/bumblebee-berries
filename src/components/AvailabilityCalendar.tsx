@@ -49,7 +49,7 @@ export default function AvailabilityCalendar({
     <div className="space-y-8">
       <div className="text-center">
         <p className="text-sm text-gray-500 mb-1">
-          Price: <span className="font-semibold text-berry-700">${pricePerCup}</span> per pint
+          Price: <span className="font-semibold text-berry-700">${pricePerCup}</span> per basket
         </p>
         <p className="text-sm text-gray-400">Select an available date to place your order</p>
       </div>

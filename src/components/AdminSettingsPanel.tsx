@@ -129,7 +129,7 @@ export default function AdminSettingsPanel({
     }
     const cups = parseInt(overrideCups, 10);
     if (isNaN(cups) || cups < 0) {
-      setOverrideError("Enter a valid number of pints (0 or more).");
+      setOverrideError("Enter a valid number of baskets (0 or more).");
       return;
     }
 
@@ -192,7 +192,7 @@ export default function AdminSettingsPanel({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Price per pint ($)
+              Price per basket ($)
             </label>
             <div className="flex items-center">
               <span className="bg-gray-100 border border-r-0 border-gray-300 rounded-l-lg px-3 py-2.5 text-gray-500 text-sm">
@@ -211,7 +211,7 @@ export default function AdminSettingsPanel({
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Default daily pint limit
+              Default daily basket limit
             </label>
             <input
               type="number"
@@ -224,7 +224,7 @@ export default function AdminSettingsPanel({
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Payment amount for helpers ($ per pint)
+              Payment amount for helpers ($ per basket)
             </label>
             <div className="flex items-center">
               <span className="bg-gray-100 border border-r-0 border-gray-300 rounded-l-lg px-3 py-2.5 text-gray-500 text-sm">
@@ -356,10 +356,10 @@ export default function AdminSettingsPanel({
       {/* Per-Day Cup Overrides */}
       <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
         <h3 className="font-semibold text-gray-800 mb-1 flex items-center gap-2">
-          <span className="text-xl">📅</span> Per-Day Pint Overrides
+          <span className="text-xl">📅</span> Per-Day Basket Overrides
         </h3>
         <p className="text-sm text-gray-500 mb-4">
-          Override the daily pint limit for specific dates (e.g., set to 0 to
+          Override the daily basket limit for specific dates (e.g., set to 0 to
           block a date).
         </p>
 
@@ -377,12 +377,12 @@ export default function AdminSettingsPanel({
             onChange={(e) => setOverrideDate(e.target.value)}
             className="border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-honey-400"
           />
-          <input
+            <input
             type="number"
             min="0"
             value={overrideCups}
             onChange={(e) => setOverrideCups(e.target.value)}
-            placeholder="Max pints"
+            placeholder="Max baskets"
             className="w-28 border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-honey-400"
           />
           <button
@@ -404,8 +404,8 @@ export default function AdminSettingsPanel({
               >
                 <span className="text-gray-700">{cfg.date}</span>
                 <div className="flex items-center gap-4">
-                  <span className="font-medium text-gray-800">
-                    {cfg.max_cups} pints max
+                    <span className="font-medium text-gray-800">
+                    {cfg.max_cups} baskets max
                   </span>
                   <button
                     onClick={() => removeOverride(cfg.date)}

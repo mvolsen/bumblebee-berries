@@ -101,7 +101,7 @@ export default function AdminOrderTable({ orders, setOrders, pricePerCup, invCup
                 <th className="px-4 py-3 font-medium">Customer</th>
                 <th className="px-4 py-3 font-medium">Phone</th>
                 <th className="px-4 py-3 font-medium">Pickup Date</th>
-                <th className="px-4 py-3 font-medium">Pints</th>
+                <th className="px-4 py-3 font-medium">Baskets</th>
                 <th className="px-4 py-3 font-medium">Amount Due</th>
                 <th className="px-4 py-3 font-medium">Status</th>
                 <th className="px-4 py-3 font-medium">Action</th>
@@ -167,7 +167,7 @@ export default function AdminOrderTable({ orders, setOrders, pricePerCup, invCup
                             <button
                               onClick={() => toggleStatus(order)}
                               disabled={toggling.has(order.id) || !canFulfill}
-                              title={!canFulfill ? `Not enough pints on hand (need ${order.quantity}, have ${invCups})` : undefined}
+                              title={!canFulfill ? `Not enough baskets on hand (need ${order.quantity}, have ${invCups})` : undefined}
                               className={`text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors disabled:opacity-40 ${
                                 order.status === "pending"
                                   ? "bg-green-600 hover:bg-green-700 text-white"

@@ -247,7 +247,7 @@ function InventorySection({
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
           <div className="text-center p-4 bg-berry-50 rounded-xl border border-berry-200">
             <div className="text-3xl font-bold text-berry-700">{onHand}</div>
-            <div className="text-sm text-berry-600 mt-1">Pints on hand</div>
+            <div className="text-sm text-berry-600 mt-1">Baskets on hand</div>
           </div>
           <div className="text-center p-4 bg-yellow-50 rounded-xl border border-yellow-200">
             <div className="text-3xl font-bold text-yellow-700">{pendingCups}</div>
@@ -269,7 +269,7 @@ function InventorySection({
 
         <div className="flex items-center gap-3">
           <label className="text-sm font-medium text-gray-700 shrink-0">
-            Update pints on hand:
+            Update baskets on hand:
           </label>
           <input
             type="number"

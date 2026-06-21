@@ -167,7 +167,7 @@ export default function AdminHelpersPanel({ helpers, setHelpers, helperPayRate, 
       {/* Summary */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <SummaryCard label="Total Helpers"  value={String(helpers.length)}       emoji="🧑‍🌾" />
-        <SummaryCard label="Pints Picked"    value={String(totalCupsPicked)}       emoji={<img src="/raspberry.png" alt="raspberry" className="w-7 h-7" />}  highlight="berry" />
+        <SummaryCard label="Baskets Picked"    value={String(totalCupsPicked)}       emoji={<img src="/raspberry.png" alt="raspberry" className="w-7 h-7" />}  highlight="berry" />
         <SummaryCard label="Total Owed"     value={`$${totalOwed.toFixed(2)}`}    emoji="🧾"  highlight="yellow" />
         <SummaryCard label="Total Paid Out" value={`$${totalPaid.toFixed(2)}`}    emoji="💵"  highlight="green" />
       </div>
@@ -220,7 +220,7 @@ export default function AdminHelpersPanel({ helpers, setHelpers, helperPayRate, 
               <thead>
                 <tr className="bg-gray-50 text-left text-xs text-gray-500 uppercase tracking-wide">
                   <th className="px-4 py-3 font-medium">Name</th>
-                  <th className="px-4 py-3 font-medium">Pints Picked</th>
+                  <th className="px-4 py-3 font-medium">Baskets Picked</th>
                   <th className="px-4 py-3 font-medium">Amount Owed</th>
                   <th className="px-4 py-3 font-medium">Amount Paid</th>
                   <th className="px-4 py-3 font-medium">Actions</th>
@@ -264,7 +264,7 @@ export default function AdminHelpersPanel({ helpers, setHelpers, helperPayRate, 
                               onClick={() => adjustCups(h, -1)}
                               disabled={isStepping || h.cups_picked === 0}
                               className="w-6 h-6 flex items-center justify-center rounded-md bg-gray-100 hover:bg-gray-200 disabled:opacity-30 text-gray-600 font-bold text-sm transition-colors"
-                              aria-label="Remove one pint"
+                              aria-label="Remove one basket"
                             >
                               −
                             </button>
@@ -275,7 +275,7 @@ export default function AdminHelpersPanel({ helpers, setHelpers, helperPayRate, 
                               onClick={() => adjustCups(h, 1)}
                               disabled={isStepping}
                               className="w-6 h-6 flex items-center justify-center rounded-md bg-gray-100 hover:bg-gray-200 disabled:opacity-30 text-gray-600 font-bold text-sm transition-colors"
-                              aria-label="Add one pint"
+                              aria-label="Add one basket"
                             >
                               +
                             </button>

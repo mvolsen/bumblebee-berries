@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
 
     if (!order) {
       return NextResponse.json(
-        { error: "Not enough pints available on that date." },
+        { error: "Not enough baskets available on that date." },
         { status: 409 }
       );
     }
